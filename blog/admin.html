@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Blog Admin — Post Builder</title>
+  <link rel="stylesheet" href="/blog/admin.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.7.2/mammoth.browser.min.js"
+          integrity="sha512-4covLYRBEok64+Bs3tpg8HTAfM+aUP/ATgSFI4WdPALtfrCteOIRlCd+vgpKdpCuWtmmHezdXaeUw4j8KIHtxw=="
+          crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="auth-gate" class="auth-gate">
+  <form id="auth-form" class="auth-form">
+    <h2 class="auth-title">
+      Admin login
+    </h2>
+    <label class="auth-label">Username</label>
+    <input id="auth-user" class="auth-input" type="text" autocomplete="username">
+    <label class="auth-label">Password</label>
+    <input id="auth-pass" class="auth-input" type="password" autocomplete="current-password">
+    <button type="submit" class="auth-submit">
+      Log in
+    </button>
+    <p id="auth-error" class="auth-error"></p>
+  </form>
+</div>
+
+  <div class="wrap">
+    <h1>Blog Post Builder</h1>
+    <p class="sub">Upload a .docx file to import content, or paste and format manually, then export the files to upload.</p>
+
+    <div class="grid">
+      <div class="panel">
+        <h2>Start here — Upload your Word document</h2>
+        <div id="dropzone" class="dropzone">
+          <p class="dropzone-title">
+            📄 Drag your .docx file here, or click to choose
+          </p>
+          <p class="dropzone-subtitle">
+            Title, headings, bold, italic, lists and images will be preserved.
+          </p>
+          <input type="file" id="docxFile" accept=".docx" class="is-hidden-input">
+        </div>
+        <p id="imagesSummary" class="sub images-summary">No images extracted yet.</p>
+
+        <h2>1. Post details</h2>
+        <label for="title">Title</label>
+        <input id="title" type="text" required placeholder="Climbing Musala in Winter">
+        <div class="row">
+          <div>
+            <label for="date">Publish date</label>
+            <input id="date" type="date" required>
+          </div>
+          <div>
+            <label for="slug">URL slug</label>
+            <input id="slug" type="text" required placeholder="climbing-musala-winter">
+          </div>
+        </div>
+        <label for="excerpt">Excerpt (1–2 sentences, shown on listing)</label>
+        <textarea id="excerpt" maxlength="400" class="excerpt-textarea" placeholder="A short summary of the post for the blog listing page."></textarea>
+        <p id="excerptCounter" class="hint">0 / 400 characters</p>
+        <div class="row">
+          <div>
+            <label for="imageAlt">Cover image alt text (optional)</label>
+            <input id="imageAlt" type="text" placeholder="Team at the summit during sunrise">
+          </div>
+          <div>
+            <label for="readMinutes">Read time (minutes)</label>
+            <input id="readMinutes" type="number" min="1" max="60" value="2">
+          </div>
+        </div>
+
+        <h2 class="content-heading">2. Post content</h2>
+        <div class="toolbar">
+          <button id="boldBtn" class="tbtn"><strong>B</strong></button>
+          <button id="italicBtn" class="tbtn"><em>I</em></button>
+          <button id="h2Btn" class="tbtn">H2</button>
+          <button id="h3Btn" class="tbtn">H3</button>
+          <button id="listBtn" class="tbtn">• List</button>
+          <button id="quoteBtn" class="tbtn">Quote</button>
+          <button id="linkBtn" class="tbtn">🔗 Link</button>
+          <button id="imageBtn" class="tbtn">🖼 Image</button>
+          <button id="dividerBtn" class="tbtn">— Divider</button>
+        </div>
+        <textarea id="body" placeholder="Paste your text here, then highlight words and click the buttons above to format..."></textarea>
+        <p class="hint">Tip: To paste from Word, use <code>Ctrl+Shift+V</code> (Cmd+Shift+V on Mac) to strip Word's hidden formatting.</p>
+
+        <section id="seo-section" class="seo-section is-hidden">
+          <h2>Review SEO & social previews</h2>
+          <p class="hint seo-intro">These tags control how the post looks in Google search results and when shared on Facebook, LinkedIn, WhatsApp, etc. Defaults are pre-filled from your title and excerpt — edit if you want.</p>
+
+          <label for="metaDescription">Meta description <span class="hint">(Google snippet, 140–160 chars ideal)</span></label>
+          <textarea id="metaDescription" maxlength="200" class="seo-textarea"></textarea>
+          <p id="metaDescCounter" class="hint">0 / 200 characters</p>
+
+          <label for="keywords">Keywords <span class="hint">(comma-separated, optional)</span></label>
+          <input id="keywords" type="text" maxlength="300" placeholder="bulgaria, mountains, charity, hiking"/>
+
+          <label for="ogTitle">Social share title</label>
+          <input id="ogTitle" type="text" maxlength="200"/>
+
+          <label for="ogDescription">Social share description</label>
+          <textarea id="ogDescription" maxlength="300" class="seo-textarea"></textarea>
+
+          <label for="ogImage">Social share image URL <span class="hint">(default: cover image)</span></label>
+          <input id="ogImage" type="text" placeholder="/blog/posts/images/cover.jpg or full URL"/>
+
+          <h3>Google search preview</h3>
+          <div id="googlePreview" class="google-preview">
+            <div id="gp-title" class="gp-title">Title</div>
+            <div id="gp-url" class="gp-url">https://bulgarian56peaks.org/blog/slug.html</div>
+            <div id="gp-desc" class="gp-desc">Description</div>
+          </div>
+
+          <h3>Facebook / LinkedIn preview</h3>
+          <div id="fbPreview" class="fb-preview">
+            <div id="fb-img" class="fb-img"></div>
+            <div class="fb-body">
+              <div class="fb-domain">BULGARIAN56PEAKS.ORG</div>
+              <div id="fb-title" class="fb-title">Title</div>
+              <div id="fb-desc" class="fb-desc">Description</div>
+            </div>
+          </div>
+
+          <p class="hint publish-hint">↓ When you're happy with the previews above, click <strong>✓ Publish live</strong> below to push the post live.</p>
+        </section>
+
+        <div class="actions">
+          <button class="btn" id="generateSeoBtn">▶ Generate SEO preview</button>
+          <button class="btn is-hidden" id="publishBtn">✓ Publish live</button>
+          <button class="btn secondary is-hidden" id="backToEditBtn">◀ Back to edit</button>
+          <button class="btn secondary" id="loadDraftBtn">Load draft</button>
+          <button class="btn secondary" id="saveDraftBtn">Save draft</button>
+          <button class="btn secondary" id="clearAllBtn">Clear</button>
+          <button class="btn secondary" id="logoutBtn">Log out</button>
+        </div>
+        <div id="status"></div>
+      </div>
+
+      <div class="panel">
+        <h2>Live preview</h2>
+        <div id="preview" class="preview"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/blog/admin.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "posts": [
+    {
+      "slug": "welcome",
+      "title": "Welcome to the Bulgarian 56 Peaks Blog",
+      "date": "2026-05-20",
+      "author": "Bulgarian 56 Peaks Team",
+      "excerpt": "After climbing all 56 peaks of Rila and Pirin, we're starting this blog to share what comes next — expeditions, fundraising milestones, and the children we support.",
+      "image": "/blog/posts/images/welcome.webp",
+      "imageAlt": "Sunrise over the Rila mountain range",
+      "readMinutes": 2,
+      "published": true
+    }
+  ]
+}

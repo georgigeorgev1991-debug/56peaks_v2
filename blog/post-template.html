@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0, user-scalable=yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="theme-color" content="#0A1432"/>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="apple-mobile-web-app-title" content="Bulgarian 56 Peaks"/>
+
+  <title>{{TITLE}} â€” Bulgarian 56 Peaks</title>
+  <meta name="description" content="{{META_DESCRIPTION}}"/>
+  <meta name="keywords" content="{{KEYWORDS}}"/>
+  <meta name="author" content="{{AUTHOR}}"/>
+  <meta name="robots" content="index, follow, max-image-preview:large"/>
+  <link rel="canonical" href="{{CANONICAL_URL}}"/>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article"/>
+  <meta property="og:site_name" content="Bulgarian 56 Peaks"/>
+  <meta property="og:title" content="{{OG_TITLE}}"/>
+  <meta property="og:description" content="{{OG_DESCRIPTION}}"/>
+  <meta property="og:image" content="{{OG_IMAGE}}"/>
+  <meta property="og:image:alt" content="{{OG_IMAGE_ALT}}"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:url" content="{{CANONICAL_URL}}"/>
+  <meta property="article:published_time" content="{{DATE_ISO}}"/>
+  <meta property="article:author" content="{{AUTHOR}}"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="{{OG_TITLE}}"/>
+  <meta name="twitter:description" content="{{OG_DESCRIPTION}}"/>
+  <meta name="twitter:image" content="{{OG_IMAGE}}"/>
+
+  <!-- JSON-LD Article schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{TITLE_JSON}}",
+    "description": "{{META_DESCRIPTION_JSON}}",
+    "image": "{{OG_IMAGE}}",
+    "datePublished": "{{DATE_ISO}}",
+    "dateModified": "{{DATE_ISO}}",
+    "author": { "@type": "Organization", "name": "{{AUTHOR_JSON}}" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Bulgarian 56 Peaks",
+      "logo": { "@type": "ImageObject", "url": "https://bulgarian56peaks.org/56/1.png" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "{{CANONICAL_URL}}" }
+  }
+  </script>
+
+  <link rel="stylesheet" href="/styles-core.css?v=7" />
+  <link rel="stylesheet" href="/styles-page-hero.css?v=6" />
+  <link rel="stylesheet" href="/styles-blog.css?v=6" />
+  <link rel="icon" type="image/png" href="/56/1.png" />
+  <link rel="apple-touch-icon" href="/56/1.png"/>
+  <script src="/components.js" defer></script>
+  <script src="/script.js?v=6" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="mountain-mount"></div>
+  <div id="nav-mount"></div>
+
+  <section class="page-hero blog-post-hero" id="main-content" tabindex="-1">
+    <div class="page-hero-content">
+      <p class="blog-post-meta">{{DATE_HUMAN}} Â· {{READ_MINUTES}} min read</p>
+      <h1>{{TITLE}}</h1>
+      <p>{{EXCERPT}}</p>
+    </div>
+  </section>
+
+  <article class="blog-post-section">
+    <div class="content-container blog-post-container">
+      <div class="blog-post-content">
+        {{BODY_HTML}}
+      </div>
+
+      <div class="blog-post-footer">
+        <a href="/blog/" class="blog-back-link">â† Back to all posts</a>
+      </div>
+    </div>
+  </article>
+
+  <div id="footer-mount"></div>
+
+  <script src="https://unpkg.com/lucide@0.511.0/dist/umd/lucide.min.js" integrity="sha512-KkhtYUWfRALH2f2/fMX95YyV8ns2gpQt4RbnBEkR6jAoEciSgKUrRY3Cz+v0dWlIFoK62z7zeML7mCjnSPi8uQ==" crossorigin="anonymous"></script>
+</body>
+</html>
