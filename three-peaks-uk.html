@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0, user-scalable=yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="theme-color" content="#0A1432"/>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="apple-mobile-web-app-title" content="Bulgarian 56 Peaks"/>
+  <meta name="description" content="A three-nation summit challenge â€” three countries, three highest peaks, one continuous charity push. Coming 2027 from Bulgarian 56 Peaks. Follow the planning and progress here."/>
+  <meta name="author" content="Bulgarian 56 Peaks"/>
+  <meta name="robots" content="noindex, follow"/>
+  <meta property="og:title" content="A Three-Nation Peak Challenge â€” Coming 2027 | Bulgarian 56 Peaks"/>
+  <meta property="og:description" content="Three countries. Three summits. One day. A 2027 charity challenge in the planning stages â€” follow the journey from first steps to summit."/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="https://bulgarian56peaks.org/three-peaks-uk.html"/>
+  <meta property="og:site_name" content="Bulgarian 56 Peaks"/>
+  <meta property="og:image" content="https://bulgarian56peaks.org/hero.webp"/>
+  <meta property="og:image:alt" content="A three-nation peak challenge â€” Bulgarian 56 Peaks 2027"/>
+  <meta property="og:image:type" content="image/webp"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="A Three-Nation Peak Challenge â€” Coming 2027 | Bulgarian 56 Peaks"/>
+  <meta name="twitter:description" content="Three countries. Three summits. One day. Coming 2027."/>
+  <meta name="twitter:image" content="https://bulgarian56peaks.org/hero.webp"/>
+  <link rel="canonical" href="https://bulgarian56peaks.org/three-peaks-uk.html"/>
+  <link rel="preconnect" href="https://unpkg.com"/>
+  <link rel="dns-prefetch" href="https://unpkg.com"/>
+  <link rel="preload" as="image" href="Peaks-2.webp" fetchpriority="high">
+  <link rel="stylesheet" href="styles-core.css?v=7" />
+  <link rel="stylesheet" href="styles-page-hero.css?v=6" />
+  <link rel="stylesheet" href="styles-peaks.css?v=7" />
+  <link rel="icon" type="image/png" href="56/1.png" />
+  <link rel="apple-touch-icon" href="56/1.png"/>
+ <script src="components.js" defer></script>
+  <script src="script.js?v=6" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "A Three-Nation Peak Challenge â€” Coming 2027",
+    "description": "Three countries, three summits, one continuous charity push. A 2027 challenge from Bulgarian 56 Peaks.",
+    "url": "https://bulgarian56peaks.org/three-peaks-uk.html",
+    "author": {
+      "@type": "Organization",
+      "name": "Bulgarian 56 Peaks",
+      "url": "https://bulgarian56peaks.org"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Bulgarian 56 Peaks",
+      "url": "https://bulgarian56peaks.org",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://bulgarian56peaks.org/56/1.png",
+        "width": 1080,
+        "height": 1080
+      }
+    },
+    "datePublished": "2026-04-26",
+    "dateModified": "2026-04-26"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://bulgarian56peaks.org/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Challenges",
+        "item": "https://bulgarian56peaks.org/challenges.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "A Three-Nation Peak Challenge",
+        "item": "https://bulgarian56peaks.org/three-peaks-uk.html"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .summit-card-planning {
+      opacity: 0.7;
+      position: relative;
+    }
+
+    .summit-card-planning .peak-image-wrapper::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 21, 48, 0.6);
+      border-radius: inherit;
+      pointer-events: none;
+    }
+
+    .summit-planning-label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(10, 21, 48, 0.85);
+      border: 1px solid rgba(100, 160, 220, 0.4);
+      color: #64A0DC;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .peak-number-badge {
+      position: absolute;
+      bottom: 0.6rem;
+      left: 0.6rem;
+      background: rgba(10, 21, 48, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: rgba(255, 255, 255, 0.9);
+      padding: 0.25rem 0.65rem;
+      border-radius: 12px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+
+    .planning-notice {
+      background: rgba(100, 160, 220, 0.08);
+      border: 1px solid rgba(100, 160, 220, 0.25);
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2.5rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .planning-notice strong {
+      color: #64A0DC;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="mountain-mount"></div>
+
+  <div id="nav-mount"></div>
+
+  <!-- Hero Section -->
+  <section class="page-hero peaks-hero" id="main-content" tabindex="-1">
+    <div class="page-hero-content">
+      <h1>A Three-Nation Peak Challenge</h1>
+      <p>Three countries. Three highest summits. One continuous push.</p>
+    </div>
+  </section>
+
+  <!-- Overview Stats -->
+  <section class="peaks-overview">
+    <div class="content-container">
+      <div class="impact-grid">
+        <div class="impact-item">
+          <div class="impact-number">3</div>
+          <p>Summits</p>
+        </div>
+        <div class="impact-item">
+          <div class="impact-number">3</div>
+          <p>Nations</p>
+        </div>
+        <div class="impact-item">
+          <div class="impact-number">2027</div>
+          <p>Target Year</p>
+        </div>
+        <div class="impact-item">
+          <div class="impact-number">0%</div>
+          <p>Challenge Progress</p>
+        </div>
+      </div>
+      <p class="peaks-intro-text">
+        The concept is simple and unforgiving: drive to the starting point of each country's highest summit, climb to the top, drive to the next â€” three countries, three peaks, all within a single continuous effort. This is the spirit of one of mountaineering's great endurance challenges, taken on as a fundraiser for children in need.
+      </p>
+    </div>
+  </section>
+
+  <!-- Challenge Detail -->
+  <section class="peaks-section">
+    <div class="content-container">
+
+      <div class="planning-notice">
+        <strong>Status: Planning Phase â€” 2027</strong><br>
+        This challenge is in the early planning stages. Route logistics, timing, and final summit details are being worked through. This page will be updated as the challenge takes shape â€” check back for progress photos and summit logs.
+      </div>
+
+      <h2 class="peaks-section-title">The Three Summits</h2>
+      <p class="peaks-section-sub">3 nations Â· 0 completed Â· 3 remaining</p>
+
+      <div class="peaks-grid" id="peaksGrid">
+
+        <!-- Summit 1 â€” Planning -->
+        <article class="peak-card summit-card-planning">
+          <div class="peak-image-wrapper">
+            <img src="hero.webp" alt="Summit 1 â€” Three-Nation Peak Challenge, Bulgarian 56 Peaks" loading="lazy" width="400" height="300"/>
+            <span class="peak-badge">#01</span>
+            <span class="summit-planning-label">Planning</span>
+            <span class="peak-number-badge">Summit 1</span>
+          </div>
+          <div class="peak-body">
+            <div class="peak-header">
+              <h3>Summit One</h3>
+              <span class="peak-name-sub">Details to be confirmed Â· Country 1 of 3</span>
+            </div>
+            <div class="peak-stats-row">
+              <div class="peak-stat-item"><i data-lucide="mountain-snow"></i><span>TBC</span></div>
+              <div class="peak-stat-item"><i data-lucide="clock"></i><span>TBC</span></div>
+            </div>
+            <p class="peak-summary">The first summit of the challenge. Route details, timing, and logistics are being confirmed. This peak will be the first stop on a continuous drive-and-climb adventure spanning three countries.</p>
+          </div>
+        </article>
+
+        <!-- Summit 2 â€” Planning -->
+        <article class="peak-card summit-card-planning">
+          <div class="peak-image-wrapper">
+            <img src="hero.webp" alt="Summit 2 â€” Three-Nation Peak Challenge, Bulgarian 56 Peaks" loading="lazy" width="400" height="300"/>
+            <span class="peak-badge">#02</span>
+            <span class="summit-planning-label">Planning</span>
+            <span class="peak-number-badge">Summit 2</span>
+          </div>
+          <div class="peak-body">
+            <div class="peak-header">
+              <h3>Summit Two</h3>
+              <span class="peak-name-sub">Details to be confirmed Â· Country 2 of 3</span>
+            </div>
+            <div class="peak-stats-row">
+              <div class="peak-stat-item"><i data-lucide="mountain-snow"></i><span>TBC</span></div>
+              <div class="peak-stat-item"><i data-lucide="clock"></i><span>TBC</span></div>
+            </div>
+            <p class="peak-summary">The second summit, reached mid-challenge. By this point the team will be running on adrenaline and determination â€” the hardest part of the day, physically and mentally.</p>
+          </div>
+        </article>
+
+        <!-- Summit 3 â€” Planning -->
+        <article class="peak-card summit-card-planning">
+          <div class="peak-image-wrapper">
+            <img src="hero.webp" alt="Summit 3 â€” Three-Nation Peak Challenge, Bulgarian 56 Peaks" loading="lazy" width="400" height="300"/>
+            <span class="peak-badge">#03</span>
+            <span class="summit-planning-label">Planning</span>
+            <span class="peak-number-badge">Summit 3</span>
+          </div>
+          <div class="peak-body">
+            <div class="peak-header">
+              <h3>Summit Three</h3>
+              <span class="peak-name-sub">Details to be confirmed Â· Country 3 of 3</span>
+            </div>
+            <div class="peak-stats-row">
+              <div class="peak-stat-item"><i data-lucide="mountain-snow"></i><span>TBC</span></div>
+              <div class="peak-stat-item"><i data-lucide="clock"></i><span>TBC</span></div>
+            </div>
+            <p class="peak-summary">The final summit and the finish line. Crossing this peak means the challenge is complete â€” three nations, three highest points, done. Every step here raises funds for vulnerable children in Bulgaria.</p>
+          </div>
+        </article>
+
+      </div><!-- /.peaks-grid -->
+
+      <div class="about-section why-challenge-section">
+        <h3>Why This Challenge?</h3>
+        <p>Every challenge we take on has a purpose beyond the summit. This one raises funds for Foundation "For Our Children" (<a href="https://detebg.org" target="_blank" rel="noopener noreferrer" class="text-link">detebg.org</a>) â€” supporting child development centres, family protection services, and foster care programs across Bulgaria. Want to support us ahead of the 2027 challenge? <a href="initiatives.html" class="text-link">Explore our initiatives.</a></p>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="footer-mount"></div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Peak photo viewer">
+    <button class="lightbox-close" aria-label="Close photo">&times;</button>
+    <img id="lightboxImg" class="lightbox-img" src="" alt="" />
+    <span id="lightboxCaption" class="lightbox-caption"></span>
+  </div>
+
+  <script src="peak-card-reveal.js?v=6" defer></script>
+  <script src="lightbox.js" defer></script>
+  <script src="https://unpkg.com/lucide@0.511.0/dist/umd/lucide.min.js" integrity="sha512-KkhtYUWfRALH2f2/fMX95YyV8ns2gpQt4RbnBEkR6jAoEciSgKUrRY3Cz+v0dWlIFoK62z7zeML7mCjnSPi8uQ==" crossorigin="anonymous"></script>
+</body>
+</html>

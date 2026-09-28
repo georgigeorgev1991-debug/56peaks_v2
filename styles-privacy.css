@@ -1,0 +1,78 @@
+.privacy-hero {
+  background-image: linear-gradient(rgba(10, 20, 50, 0.7), rgba(10, 20, 50, 0.9)), url('hero.webp');
+}
+
+.privacy-content {
+  padding: 6rem 0;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+.privacy-meta {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  margin-bottom: 2rem;
+}
+
+.privacy-content a {
+  color: #5AA678;
+}
+
+.privacy-code {
+  color: #5AA678;
+  font-family: monospace;
+}
+
+.about-section {
+  margin-bottom: 3rem;
+}
+
+.about-section h2 {
+  font-size: clamp(1.4rem, 2.5vw + 0.6rem, 2rem);
+  color: #5AA678;
+  margin-bottom: 2rem;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+.initiative-details {
+  margin: 3rem 0;
+  text-align: left;
+  max-width: none;
+}
+
+.initiative-details ul {
+  list-style: none;
+}
+
+.initiative-details li {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+  opacity: 0.8;
+  font-size: 1.05rem;
+}
+
+.initiative-details li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #5AA678;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .privacy-content {
+    padding: 2.5rem 0;
+  }
+
+  .initiative-details {
+    margin: 2rem 0;
+  }
+}

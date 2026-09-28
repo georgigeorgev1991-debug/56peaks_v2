@@ -1,0 +1,152 @@
+/* Initiatives 2×2 grid layout */
+.initiatives-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.initiative-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 3rem 2.5rem;
+  border-radius: 12px;
+  margin: 0;
+  max-width: none;
+  text-align: center;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              border-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.initiative-card:hover {
+  background: rgba(90, 166, 120, 0.07);
+  border-color: rgba(90, 166, 120, 0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.initiative-icon {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5AA678;
+}
+
+.initiative-card h2 {
+  font-size: 1.85rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.initiative-card p {
+  font-size: 1.05rem;
+  opacity: 0.8;
+  line-height: 1.7;
+  max-width: none;
+  margin: 0 auto 2rem;
+}
+
+.initiative-details {
+  margin: 3rem 0;
+  text-align: left;
+  max-width: none;
+}
+
+.initiative-details h4, .initiative-impact h4 {
+  color: #5AA678;
+  margin-bottom: 1.2rem;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.initiative-details ul {
+  list-style: none;
+}
+
+.initiative-details li {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+  opacity: 0.8;
+  font-size: 1.05rem;
+}
+
+.initiative-details li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #5AA678;
+  font-weight: bold;
+}
+
+.initiative-impact {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: none;
+  margin: 0;
+}
+
+.initiative-impact p {
+  margin-bottom: 0;
+}
+
+.initiatives-content {
+  padding: 6rem 0;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .initiatives-content {
+    padding: 2.5rem 0;
+  }
+
+  .initiatives-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+  }
+
+  .initiative-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .initiative-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .initiative-details {
+    margin: 2rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .initiatives-grid {
+    gap: 0.8rem;
+  }
+
+  .initiative-card {
+    padding: 1.5rem 1.1rem;
+  }
+
+  .initiative-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .initiative-details h4,
+  .initiative-impact h4 {
+    font-size: 1.1rem;
+  }
+}
+
+.initiative-icon svg {
+  width: 1.8rem;
+  height: 1.8rem;
+  stroke-width: 1.5;
+}
+

@@ -1,0 +1,383 @@
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.impact-item {
+  text-align: center;
+}
+
+.impact-number {
+  font-size: clamp(1.8rem, 3.5vw + 1rem, 3.5rem);
+  font-weight: 800;
+  color: #5AA678;
+  margin-bottom: 0.5rem;
+}
+
+.impact-item p {
+  font-size: 1rem;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+/* ==========================================
+   56 Peaks Challenge Page
+   ========================================== */
+
+.peaks-hero {
+  background-image: linear-gradient(rgba(10, 20, 50, 0.58), rgba(10, 20, 50, 0.88)), url('Peaks-2.webp');
+}
+
+.peaks-overview {
+  padding: 4rem 0 1rem;
+}
+
+.peaks-intro-text {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  opacity: 0.65;
+  max-width: 680px;
+  margin: 2.5rem auto 0;
+}
+
+.peaks-section {
+  padding: 3rem 0 6rem;
+}
+
+/* Long scroll (56 cards): defer off-screen paint without CLS from a fixed intrinsic guess */
+.page-56-peaks .peaks-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
+
+.peaks-section-title {
+  text-align: center;
+  font-size: clamp(1.4rem, 2.5vw + 0.6rem, 2rem);
+  color: #5AA678;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.01em;
+}
+
+.peaks-section-sub {
+  text-align: center;
+  opacity: 0.5;
+  font-size: 0.92rem;
+  margin-bottom: 3rem;
+}
+
+/* Peaks grid */
+.peaks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+.peaks-sentinel {
+  grid-column: 1 / -1;
+  height: 1px;
+  width: 100%;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Peak card — hidden until revealed by IntersectionObserver */
+.peak-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.55s ease, transform 0.55s ease,
+              border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.peak-card.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.peak-card:hover {
+  border-color: rgba(90, 166, 120, 0.35);
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.35);
+}
+
+.peak-card:focus-visible {
+  outline: 2px solid rgba(90, 166, 120, 0.85);
+  outline-offset: 3px;
+}
+
+/* Stagger by column */
+.peaks-grid .peak-card:nth-child(3n + 2) { transition-delay: 0.11s; }
+.peaks-grid .peak-card:nth-child(3n + 3) { transition-delay: 0.22s; }
+
+.peak-image-wrapper {
+  position: relative;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  background: #0a1530;
+}
+
+.peak-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  transition: transform 0.55s ease;
+}
+
+.peak-card:hover .peak-image-wrapper img {
+  transform: scale(1.05);
+}
+
+.peak-badge {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.7rem;
+  background: rgba(5, 12, 35, 0.82);
+  border: 1px solid rgba(90, 166, 120, 0.5);
+  color: #5AA678;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.22rem 0.55rem;
+  border-radius: 4px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  user-select: none;
+}
+
+.peak-body {
+  padding: 1.3rem 1.4rem 1.5rem;
+}
+
+.peak-header {
+  margin-bottom: 0.9rem;
+}
+
+.peak-header h3 {
+  font-size: 1.05rem;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 0.18rem;
+  line-height: 1.3;
+}
+
+.peak-name-sub {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.38);
+  font-style: italic;
+}
+
+.peak-stats-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.45rem 0.7rem;
+  margin-bottom: 0.95rem;
+  padding: 0.75rem 0.85rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.peak-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.38rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.peak-stat-item svg {
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  color: #5AA678;
+  flex-shrink: 0;
+  stroke-width: 2;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.peak-summary {
+  font-size: 0.84rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 0;
+}
+
+/* "Explore" link on challenge card */
+.challenge-card-link {
+  display: inline-block;
+  margin-top: 1.1rem;
+  color: #5AA678;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.22s ease;
+}
+
+.challenge-card-link::after {
+  content: ' →';
+}
+
+.challenge-card-link:hover {
+  color: white;
+}
+
+/* Planning challenge card variant */
+.challenge-card-planning .challenge-badge {
+  background: rgba(100, 160, 220, 0.15);
+  color: #64A0DC;
+  border-color: rgba(100, 160, 220, 0.3);
+}
+
+.challenge-card-planning .challenge-icon {
+  color: #64A0DC;
+}
+
+.challenge-card-planning:hover {
+  background: rgba(100, 160, 220, 0.07);
+  border-color: rgba(100, 160, 220, 0.3);
+}
+
+.challenge-card-planning .progress-fill {
+  background: linear-gradient(to right, #64A0DC, #3880B8);
+}
+
+.challenge-card-planning .challenge-card-link {
+  color: #64A0DC;
+}
+
+/* Peaks page responsive */
+@media (max-width: 1024px) {
+  .peaks-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .peaks-grid .peak-card:nth-child(3n + 2),
+  .peaks-grid .peak-card:nth-child(3n + 3) {
+    transition-delay: 0s;
+  }
+  .peaks-grid .peak-card:nth-child(2n + 2) {
+    transition-delay: 0.11s;
+  }
+}
+
+@media (max-width: 560px) {
+  .peaks-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .peaks-grid .peak-card:nth-child(2n + 2) {
+    transition-delay: 0s;
+  }
+}
+
+/* Final peak card — Musala highlight */
+.peak-card-final {
+  border-color: rgba(90, 166, 120, 0.35);
+  background: rgba(90, 166, 120, 0.06);
+}
+
+.peak-card-final .peak-badge {
+  background: rgba(90, 166, 120, 0.25);
+  border-color: rgba(90, 166, 120, 0.8);
+  color: #7dcf9a;
+}
+
+/* Peaks overview — force 4 columns in one row */
+.peaks-overview .impact-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  .peaks-overview .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+  padding: 1.5rem;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox-img {
+  max-width: 92vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.7);
+  cursor: default;
+  display: block;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1.4rem;
+  line-height: 1;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+  z-index: 2001;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-caption {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.88rem;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* Cards cursor pointer for lightbox */
+.peak-card {
+  cursor: pointer;
+}
+
+/* Scale down impact numbers in peaks overview to keep all 4 on one row */
+.peaks-overview .impact-number {
+  font-size: 3.15rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  .peak-card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+

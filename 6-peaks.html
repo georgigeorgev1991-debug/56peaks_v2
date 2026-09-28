@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0, user-scalable=yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="theme-color" content="#0A1432"/>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="apple-mobile-web-app-title" content="Bulgarian 56 Peaks"/>
+
+  <!-- Primary SEO -->
+  <title>The 6 Peak Balkans Challenge â€” Highest Summits of Bulgaria's Neighbours | Bulgarian 56 Peaks</title>
+  <meta name="description" content="Climbing the highest peak in each of Bulgaria's 5 neighbouring countries â€” Greece, Romania, North Macedonia, Turkey and Serbia. 3 of 6 summits completed. 50% done."/>
+  <meta name="keywords" content="Balkans highest peaks challenge, Musala Bulgaria, Olympus Greece, Moldoveanu Romania, Korab North Macedonia, Bulgarian hiking charity, Balkans mountain challenge"/>
+  <meta name="author" content="Bulgarian 56 Peaks"/>
+  <meta name="robots" content="index, follow, max-image-preview:large"/>
+  <meta name="geo.region" content="BG"/>
+  <meta name="geo.placename" content="Balkans, Southeast Europe"/>
+  <link rel="canonical" href="https://bulgarian56peaks.org/6-peaks.html"/>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The 6 Peak Balkans Challenge â€” Bulgarian 56 Peaks"/>
+  <meta property="og:description" content="Climbing the highest peak in Bulgaria and each of its 5 neighbours. 3 of 6 summits reached â€” Greece, Romania and North Macedonia still to come."/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="https://bulgarian56peaks.org/6-peaks.html"/>
+  <meta property="og:site_name" content="Bulgarian 56 Peaks"/>
+  <meta property="og:image" content="https://bulgarian56peaks.org/6peaks/1.webp"/>
+  <meta property="og:image:alt" content="The 6 Peak Balkans Challenge â€” highest mountains across Southeast Europe"/>
+  <meta property="og:image:type" content="image/webp"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="article:author" content="Bulgarian 56 Peaks"/>
+  <meta property="article:published_time" content="2026-04-26T00:00:00+00:00"/>
+  <meta property="article:modified_time" content="2026-04-26T00:00:00+00:00"/>
+  <meta property="article:section" content="Challenges"/>
+  <meta property="article:tag" content="Balkans"/>
+  <meta property="article:tag" content="Hiking"/>
+  <meta property="article:tag" content="Mountain Challenge"/>
+  <meta property="article:tag" content="Bulgaria"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="The 6 Peak Balkans Challenge â€” Bulgarian 56 Peaks"/>
+  <meta name="twitter:description" content="6 countries. 6 highest peaks. 3 summits done â€” Bulgaria, Turkey and Serbia. Greece, Romania and North Macedonia still ahead."/>
+  <meta name="twitter:image" content="https://bulgarian56peaks.org/6peaks/1.webp"/>
+  <meta name="twitter:image:alt" content="The 6 Peak Balkans Challenge â€” highest mountains across Southeast Europe"/>
+
+  <!-- Performance hints -->
+  <link rel="preconnect" href="https://unpkg.com"/>
+  <link rel="dns-prefetch" href="https://unpkg.com"/>
+  <link rel="preload" as="image" href="Peaks-2.webp" fetchpriority="high">
+
+  <link rel="stylesheet" href="styles-core.css?v=7" />
+  <link rel="stylesheet" href="styles-page-hero.css?v=6" />
+  <link rel="stylesheet" href="styles-peaks.css?v=7" />
+  <link rel="icon" type="image/png" href="56/1.png" />
+ <script src="components.js" defer></script>
+  <script src="script.js?v=6" defer></script>
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The 6 Peak Balkans Challenge â€” Highest Summits of Bulgaria's Neighbours",
+    "description": "Climbing the highest peak in Bulgaria and each of its five neighbouring countries: Greece, Romania, North Macedonia, Turkey and Serbia.",
+    "url": "https://bulgarian56peaks.org/6-peaks.html",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://bulgarian56peaks.org/6-peaks.html"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Bulgarian 56 Peaks",
+      "url": "https://bulgarian56peaks.org"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Bulgarian 56 Peaks",
+      "url": "https://bulgarian56peaks.org",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://bulgarian56peaks.org/56/1.png",
+        "width": 1080,
+        "height": 1080
+      }
+    },
+    "datePublished": "2026-04-26",
+    "dateModified": "2026-04-26"
+  }
+  </script>
+
+  <!-- Structured Data: Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://bulgarian56peaks.org/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Challenges",
+        "item": "https://bulgarian56peaks.org/challenges.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "The 6 Peak Balkans Challenge",
+        "item": "https://bulgarian56peaks.org/6-peaks.html"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* Upcoming peak overlay */
+    .peak-card-upcoming {
+      opacity: 0.65;
+      position: relative;
+    }
+
+    .peak-card-upcoming .peak-image-wrapper::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 21, 48, 0.55);
+      border-radius: inherit;
+      pointer-events: none;
+    }
+
+    .peak-upcoming-label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(10, 21, 48, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: rgba(255, 255, 255, 0.85);
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .peak-country-badge {
+      position: absolute;
+      bottom: 0.6rem;
+      left: 0.6rem;
+      background: rgba(10, 21, 48, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: rgba(255, 255, 255, 0.9);
+      padding: 0.25rem 0.65rem;
+      border-radius: 12px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+
+    .peak-card-upcoming .peak-country-badge {
+      opacity: 0.7;
+    }
+
+    .peak-status-completed .peak-badge {
+      background: #5AA678;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="mountain-mount"></div>
+
+  <div id="nav-mount"></div>
+
+  <!-- Hero Section -->
+  <section class="page-hero peaks-hero" id="main-content" tabindex="-1">
+    <div class="page-hero-content">
+      <h1>The 6 Peak Balkans Challenge</h1>
+      <p>Six countries. Six highest summits. One mission across the Balkans.</p>
+    </div>
+  </section>
+
+  <!-- Overview Stats -->
+  <section class="peaks-overview">
+    <div class="content-container">
+      <div class="impact-grid">
+        <div class="impact-item">
+          <div class="impact-number">6</div>
+          <p>Countries â€” Bulgaria &amp; 5 Neighbours</p>
+        </div>
+        <div class="impact-item">
+          <div class="impact-number">3 / 6</div>
+          <p>Summits Completed</p>
+        </div>
+        <div class="impact-item">
+          <div class="impact-number">2,925 m</div>
+          <p>Highest Summit â€” Musala, Bulgaria</p>
+        </div>
+        <div class="impact-item">
+          <div class="impact-number">50%</div>
+          <p>Challenge Progress</p>
+        </div>
+      </div>
+      <p class="peaks-intro-text">
+        After conquering all 56 peaks of Rila and Pirin, the next chapter takes us beyond Bulgaria's borders â€” to the highest points of Greece, Romania, North Macedonia, Turkey, and Serbia. Musala was the first. Three summits are done. Three more await.
+      </p>
+    </div>
+  </section>
+
+  <!-- All 6 Peaks -->
+  <section class="peaks-section">
+    <div class="content-container">
+      <h2 class="peaks-section-title">All 6 Summits</h2>
+      <p class="peaks-section-sub">6 countries Â· 3 completed Â· 3 remaining</p>
+
+      <div class="peaks-grid" id="peaksGrid">
+
+        <!-- Peak 01 â€” Bulgaria (Completed) -->
+        <article class="peak-card peak-status-completed">
+          <div class="peak-image-wrapper">
+            <img src="6peaks/1.webp" alt="Musala peak, 2925 m, highest peak in the Balkans, Rila mountain, Bulgaria" loading="lazy" width="400" height="300"/>
+            <span class="peak-badge">#01</span>
+            <span class="peak-country-badge">Bulgaria</span>
+          </div>
+          <div class="peak-body">
+            <div class="peak-header">
+              <h3>ÐœÑƒÑÐ°Ð»Ð° â€” Musala</h3>
+              <span class="peak-name-sub">2,925 m Â· Rila, Bulgaria Â· Highest peak in the Balkans</span>
+            </div>
+            <div class="peak-stats-row">
+              <div class="peak-stat-item"><i data-lucide="mountain-snow"></i><span>2,925 m</span></div>
+              <div class="peak-stat-item"><i data-lucide="clock"></i><span>5â€“6 h</span></div>
+              <div class="peak-stat-item"><i data-lucide="map"></i><span>11 km</span></div>
+              <div class="peak-stat-item"><i data-lucide="trending-up"></i><span>+900 m</span></div>
+            </div>
+            <p class="peak-summary">The highest peak in the Balkans and the natural starting point of this challenge â€” already summited as the final peak of the 56 Peaks Challenge. Musala anchors everything that came before and everything that follows.</p>
+          </div>
+        </article>
+
+        <!-- Peak 02 â€” Turkey (Completed) -->
+        <article class="peak-card peak-status-completed">
+          <div class="peak-image-wrapper">
+            <img src="6peaks/2.webp" alt="Highest peak in Turkey, Balkans Challenge, Bulgarian 56 Peaks" loading="lazy" width="400" height="300"/>
+            <span class="peak-badge">#02</span>
+            <span class="peak-country-badge">Turkey</span>
+          </div>
+          <div class="peak-body">
+            <div class="peak-header">
+              <h3>Turkey's Highest</h3>
+              <span class="peak-name-sub">Summit Reached Â· Balkans Challenge Peak 2</span>
+            </div>
+            <div class="peak-stats-row">
+              <div class="peak-stat-item"><i data-lucide="mountain-snow"></i><span>Summit</span></div>
+              <div class="peak-stat-item"><i data-lucide="flag"></i><span>Completed</span></div>
+            </div>
+            <p class="peak-summary">The Turkish summit has been reached. A demanding and unique ascent that expanded the challenge beyond Bulgaria's borders for the first time.</p>
+          </div>
+        </article>
+
+        <!-- Peak 03 â€” Serbia (Completed) -->
+        <article class="peak-card peak-status-completed">
+          <div class="peak-image-wrapper">
+            <img src="6peaks/3.webp" alt="MidÅ¾or peak, highest peak in Serbia, Balkans Challenge, Bulgarian 56 Peaks" loading="lazy" width="400" height="300"/>
+            <span class="peak-badge">#03</span>
+            <span class="peak-country-badge">Serbia</span>
+          </div>
+          <div class="peak-body">
+            <div class="peak-header">
+              <h3>MidÅ¾or</h3>
+              <span class="peak-name-sub">2,169 m Â· Stara Planina, Serbia Â· Highest peak in Serbia</span>
+            </div>
+            <div class="peak-stats-row">
+              <div class="peak-stat-item"><i data-lucide="mountain-snow"></i><span>2,169 m</span></div>
+              <div class="peak-stat-item"><i data-lucide="flag"></i><span>Completed</span></div>
+            </div>
+            <p class="peak-summary">MidÅ¾or sits on the border of Serbia and Bulgaria in the Stara Planina range â€” a fitting summit that bridges the two countries. The highest point in Serbia, reached and logged.</p>
+          </div>
+        </article>
+
+        <!-- Peak 04 â€” Greece (Upcoming) -->
+        <article class="peak-card peak-card-upcoming">
+          <div class="peak-image-wrapper">
+            <img src="6peaks/4.webp" alt="Mytikas, Mount Olympus, 2917 m, highest peak in Greece, Balkans Challenge" loading="lazy" width="400" height="300"/>
+            <span class="peak-badge">#04</span>
+            <span class="peak-upcoming-label">Upcoming</span>
+            <span class="peak-country-badge">Greece</span>
+          </div>
+          <div class="peak-body">
+            <div class="peak-header">
+              <h3>Mytikas â€” Mount Olympus</h3>
+              <span class="peak-name-sub">2,917 m Â· Olympus, Greece Â· Highest peak in Greece</span>
+            </div>
+            <div class="peak-stats-row">
+              <div class="peak-stat-item"><i data-lucide="mountain-snow"></i><span>2,917 m</span></div>
+              <div class="peak-stat-item"><i data-lucide="clock"></i><span>8â€“10 h</span></div>
+              <div class="peak-stat-item"><i data-lucide="map"></i><span>~18 km</span></div>
+              <div class="peak-stat-item"><i data-lucide="trending-up"></i><span>+2,200 m</span></div>
+            </div>
+            <p class="peak-summary">The mythical home of the gods and the highest peak in Greece. Mytikas requires technical scrambling on the final approach â€” one of the most challenging summits in this challenge and one of the most iconic in all of Europe.</p>
+          </div>
+        </article>
+
+        <!-- Peak 05 â€” North Macedonia (Upcoming) -->
+        <article class="peak-card peak-card-upcoming">
+          <div class="peak-image-wrapper">
+            <img src="6peaks/5.webp" alt="Korab peak, 2764 m, highest peak in North Macedonia, Balkans Challenge" loading="lazy" width="400" height="300"/>
+            <span class="peak-badge">#05</span>
+            <span class="peak-upcoming-label">Upcoming</span>
+            <span class="peak-country-badge">North Macedonia</span>
+          </div>
+          <div class="peak-body">
+            <div class="peak-header">
+              <h3>Korab</h3>
+              <span class="peak-name-sub">2,764 m Â· Å ar Mountains Â· Highest peak in North Macedonia</span>
+            </div>
+            <div class="peak-stats-row">
+              <div class="peak-stat-item"><i data-lucide="mountain-snow"></i><span>2,764 m</span></div>
+              <div class="peak-stat-item"><i data-lucide="clock"></i><span>7â€“9 h</span></div>
+              <div class="peak-stat-item"><i data-lucide="map"></i><span>~16 km</span></div>
+              <div class="peak-stat-item"><i data-lucide="trending-up"></i><span>+1,500 m</span></div>
+            </div>
+            <p class="peak-summary">Korab straddles the border of North Macedonia and Albania, offering an expansive ridge traverse and remote alpine character. The highest point in North Macedonia awaits.</p>
+          </div>
+        </article>
+
+        <!-- Peak 06 â€” Romania (Upcoming) -->
+        <article class="peak-card peak-card-upcoming">
+          <div class="peak-image-wrapper">
+            <img src="6peaks/6.webp" alt="Moldoveanu peak, 2544 m, highest peak in Romania, Balkans Challenge" loading="lazy" width="400" height="300"/>
+            <span class="peak-badge">#06</span>
+            <span class="peak-upcoming-label">Upcoming</span>
+            <span class="peak-country-badge">Romania</span>
+          </div>
+          <div class="peak-body">
+            <div class="peak-header">
+              <h3>Moldoveanu</h3>
+              <span class="peak-name-sub">2,544 m Â· FÄƒgÄƒraÈ™ Mountains, Romania Â· Highest peak in Romania</span>
+            </div>
+            <div class="peak-stats-row">
+              <div class="peak-stat-item"><i data-lucide="mountain-snow"></i><span>2,544 m</span></div>
+              <div class="peak-stat-item"><i data-lucide="clock"></i><span>7â€“9 h</span></div>
+              <div class="peak-stat-item"><i data-lucide="map"></i><span>~18 km</span></div>
+              <div class="peak-stat-item"><i data-lucide="trending-up"></i><span>+1,400 m</span></div>
+            </div>
+            <p class="peak-summary">Deep in the FÄƒgÄƒraÈ™ range, Moldoveanu is approached via long ridges with spectacular views across the Southern Carpathians. The final summit of the Balkans Challenge â€” and the one that will complete the mission.</p>
+          </div>
+        </article>
+
+      </div><!-- /.peaks-grid -->
+    </div>
+  </section>
+
+  <div id="footer-mount"></div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Peak photo viewer">
+    <button class="lightbox-close" aria-label="Close photo">&times;</button>
+    <img id="lightboxImg" class="lightbox-img" src="" alt="" />
+    <span id="lightboxCaption" class="lightbox-caption"></span>
+  </div>
+
+  <script src="peak-card-reveal.js?v=6" defer></script>
+  <script src="lightbox.js" defer></script>
+  <script src="https://unpkg.com/lucide@0.511.0/dist/umd/lucide.min.js" integrity="sha512-KkhtYUWfRALH2f2/fMX95YyV8ns2gpQt4RbnBEkR6jAoEciSgKUrRY3Cz+v0dWlIFoK62z7zeML7mCjnSPi8uQ==" crossorigin="anonymous"></script>
+</body>
+</html>

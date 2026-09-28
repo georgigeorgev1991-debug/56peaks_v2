@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0, user-scalable=yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="theme-color" content="#0A1432"/>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="apple-mobile-web-app-title" content="Bulgarian 56 Peaks"/>
+  <meta name="description" content="The Bulgarian Three Peaks â€” the highest summit of each of three iconic Bulgarian mountain ranges, in one challenge. Coming 2027. Follow planning and progress here."/>
+  <meta name="author" content="Bulgarian 56 Peaks"/>
+  <meta name="robots" content="noindex, follow"/>
+  <meta property="og:title" content="The Bulgarian Three Peaks â€” Coming 2027 | Bulgarian 56 Peaks"/>
+  <meta property="og:description" content="Three mountain ranges. Three highest summits. One challenge that celebrates the peaks that define Bulgaria. Coming 2027 â€” follow the journey from planning to summit."/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="https://bulgarian56peaks.org/three-peaks-bg.html"/>
+  <meta property="og:site_name" content="Bulgarian 56 Peaks"/>
+  <meta property="og:image" content="https://bulgarian56peaks.org/hero.webp"/>
+  <meta property="og:image:alt" content="The Bulgarian Three Peaks â€” Bulgarian 56 Peaks 2027"/>
+  <meta property="og:image:type" content="image/webp"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="The Bulgarian Three Peaks â€” Coming 2027 | Bulgarian 56 Peaks"/>
+  <meta name="twitter:description" content="Three ranges. Three summits. One challenge that stays close to home. Coming 2027."/>
+  <meta name="twitter:image" content="https://bulgarian56peaks.org/hero.webp"/>
+  <link rel="canonical" href="https://bulgarian56peaks.org/three-peaks-bg.html"/>
+  <link rel="preconnect" href="https://unpkg.com"/>
+  <link rel="dns-prefetch" href="https://unpkg.com"/>
+  <link rel="preload" as="image" href="Peaks-2.webp" fetchpriority="high">
+  <link rel="stylesheet" href="styles-core.css?v=7" />
+  <link rel="stylesheet" href="styles-page-hero.css?v=6" />
+  <link rel="stylesheet" href="styles-peaks.css?v=7" />
+  <link rel="icon" type="image/png" href="56/1.png" />
+  <link rel="apple-touch-icon" href="56/1.png"/>
+ <script src="components.js" defer></script>
+  <script src="script.js?v=6" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Bulgarian Three Peaks â€” Coming 2027",
+    "description": "Three Bulgarian mountain ranges, three highest summits, one charity challenge. Coming 2027 from Bulgarian 56 Peaks.",
+    "url": "https://bulgarian56peaks.org/three-peaks-bg.html",
+    "author": {
+      "@type": "Organization",
+      "name": "Bulgarian 56 Peaks",
+      "url": "https://bulgarian56peaks.org"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Bulgarian 56 Peaks",
+      "url": "https://bulgarian56peaks.org",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://bulgarian56peaks.org/56/1.png",
+        "width": 1080,
+        "height": 1080
+      }
+    },
+    "datePublished": "2026-04-26",
+    "dateModified": "2026-04-26"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://bulgarian56peaks.org/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Challenges",
+        "item": "https://bulgarian56peaks.org/challenges.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "The Bulgarian Three Peaks",
+        "item": "https://bulgarian56peaks.org/three-peaks-bg.html"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .summit-card-planning {
+      opacity: 0.7;
+      position: relative;
+    }
+
+    .summit-card-planning .peak-image-wrapper::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 21, 48, 0.6);
+      border-radius: inherit;
+      pointer-events: none;
+    }
+
+    .summit-planning-label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(10, 21, 48, 0.85);
+      border: 1px solid rgba(100, 160, 220, 0.4);
+      color: #64A0DC;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .peak-number-badge {
+      position: absolute;
+      bottom: 0.6rem;
+      left: 0.6rem;
+      background: rgba(10, 21, 48, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: rgba(255, 255, 255, 0.9);
+      padding: 0.25rem 0.65rem;
+      border-radius: 12px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+
+    .planning-notice {
+      background: rgba(100, 160, 220, 0.08);
+      border: 1px solid rgba(100, 160, 220, 0.25);
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2.5rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .planning-notice strong {
+      color: #64A0DC;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="mountain-mount"></div>
+
+  <div id="nav-mount"></div>
+
+  <!-- Hero Section -->
+  <section class="page-hero peaks-hero" id="main-content" tabindex="-1">
+    <div class="page-hero-content">
+      <h1>The Bulgarian Three Peaks</h1>
+      <p>Three ranges. Three summits. One challenge, close to home.</p>
+    </div>
+  </section>
+
+  <!-- Overview Stats -->
+  <section class="peaks-overview">
+    <div class="content-container">
+      <div class="impact-grid">
+        <div class="impact-item">
+          <div class="impact-number">3</div>
+          <p>Summits</p>
+        </div>
+        <div class="impact-item">
+          <div class="impact-number">3</div>
+          <p>Mountain Ranges</p>
+        </div>
+        <div class="impact-item">
+          <div class="impact-number">2027</div>
+          <p>Target Year</p>
+        </div>
+        <div class="impact-item">
+          <div class="impact-number">0%</div>
+          <p>Challenge Progress</p>
+        </div>
+      </div>
+      <p class="peaks-intro-text">
+        Bulgaria is home to some of the most dramatic mountain terrain in the Balkans. This challenge takes the highest summit of each of three iconic Bulgarian mountain ranges and links them into a single continuous effort â€” a tribute to the landscapes that have defined everything we've done since the very first peak. In the same spirit as its international counterpart, but entirely on home ground.
+      </p>
+    </div>
+  </section>
+
+  <!-- Challenge Detail -->
+  <section class="peaks-section">
+    <div class="content-container">
+
+      <div class="planning-notice">
+        <strong>Status: Planning Phase â€” 2027</strong><br>
+        This challenge is in the early planning stages. The three mountain ranges, routes, and logistics are being confirmed. This page will track the full journey from first planning steps through to all three summits â€” check back for updates, photos, and progress logs.
+      </div>
+
+      <h2 class="peaks-section-title">The Three Summits</h2>
+      <p class="peaks-section-sub">3 mountain ranges Â· 0 completed Â· 3 remaining</p>
+
+      <div class="peaks-grid" id="peaksGrid">
+
+        <!-- Summit 1 â€” Planning -->
+        <article class="peak-card summit-card-planning">
+          <div class="peak-image-wrapper">
+            <img src="hero.webp" alt="Summit 1 â€” The Bulgarian Three Peaks, Bulgarian 56 Peaks" loading="lazy" width="400" height="300"/>
+            <span class="peak-badge">#01</span>
+            <span class="summit-planning-label">Planning</span>
+            <span class="peak-number-badge">Range 1</span>
+          </div>
+          <div class="peak-body">
+            <div class="peak-header">
+              <h3>Summit One</h3>
+              <span class="peak-name-sub">Details to be confirmed Â· Range 1 of 3</span>
+            </div>
+            <div class="peak-stats-row">
+              <div class="peak-stat-item"><i data-lucide="mountain-snow"></i><span>TBC</span></div>
+              <div class="peak-stat-item"><i data-lucide="clock"></i><span>TBC</span></div>
+            </div>
+            <p class="peak-summary">The first summit of the Bulgarian Three Peaks challenge. Route details, elevation, and logistics are being finalised. This peak will set the tone for everything that follows.</p>
+          </div>
+        </article>
+
+        <!-- Summit 2 â€” Planning -->
+        <article class="peak-card summit-card-planning">
+          <div class="peak-image-wrapper">
+            <img src="hero.webp" alt="Summit 2 â€” The Bulgarian Three Peaks, Bulgarian 56 Peaks" loading="lazy" width="400" height="300"/>
+            <span class="peak-badge">#02</span>
+            <span class="summit-planning-label">Planning</span>
+            <span class="peak-number-badge">Range 2</span>
+          </div>
+          <div class="peak-body">
+            <div class="peak-header">
+              <h3>Summit Two</h3>
+              <span class="peak-name-sub">Details to be confirmed Â· Range 2 of 3</span>
+            </div>
+            <div class="peak-stats-row">
+              <div class="peak-stat-item"><i data-lucide="mountain-snow"></i><span>TBC</span></div>
+              <div class="peak-stat-item"><i data-lucide="clock"></i><span>TBC</span></div>
+            </div>
+            <p class="peak-summary">The second summit, from a different mountain range entirely. Each peak in this challenge represents a distinct Bulgarian landscape â€” this one is no exception.</p>
+          </div>
+        </article>
+
+        <!-- Summit 3 â€” Planning -->
+        <article class="peak-card summit-card-planning">
+          <div class="peak-image-wrapper">
+            <img src="hero.webp" alt="Summit 3 â€” The Bulgarian Three Peaks, Bulgarian 56 Peaks" loading="lazy" width="400" height="300"/>
+            <span class="peak-badge">#03</span>
+            <span class="summit-planning-label">Planning</span>
+            <span class="peak-number-badge">Range 3</span>
+          </div>
+          <div class="peak-body">
+            <div class="peak-header">
+              <h3>Summit Three</h3>
+              <span class="peak-name-sub">Details to be confirmed Â· Range 3 of 3</span>
+            </div>
+            <div class="peak-stats-row">
+              <div class="peak-stat-item"><i data-lucide="mountain-snow"></i><span>TBC</span></div>
+              <div class="peak-stat-item"><i data-lucide="clock"></i><span>TBC</span></div>
+            </div>
+            <p class="peak-summary">The final summit â€” the one that closes the challenge. Three ranges, three peaks, all in service of the same mission: raising funds for the children and families who need it most.</p>
+          </div>
+        </article>
+
+      </div><!-- /.peaks-grid -->
+
+      <div class="about-section why-challenge-section">
+        <h3>Why This Challenge?</h3>
+        <p>As with every challenge we take on, the summit is not the point â€” the fundraising is. All proceeds go directly to Foundation "For Our Children" (<a href="https://detebg.org" target="_blank" rel="noopener noreferrer" class="text-link">detebg.org</a>), funding child development centres, family support services, and foster care programs across Bulgaria. Want to support us ahead of the 2027 challenge? <a href="initiatives.html" class="text-link">Explore our initiatives.</a></p>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="footer-mount"></div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Peak photo viewer">
+    <button class="lightbox-close" aria-label="Close photo">&times;</button>
+    <img id="lightboxImg" class="lightbox-img" src="" alt="" />
+    <span id="lightboxCaption" class="lightbox-caption"></span>
+  </div>
+
+  <script src="peak-card-reveal.js?v=6" defer></script>
+  <script src="lightbox.js" defer></script>
+  <script src="https://unpkg.com/lucide@0.511.0/dist/umd/lucide.min.js" integrity="sha512-KkhtYUWfRALH2f2/fMX95YyV8ns2gpQt4RbnBEkR6jAoEciSgKUrRY3Cz+v0dWlIFoK62z7zeML7mCjnSPi8uQ==" crossorigin="anonymous"></script>
+</body>
+</html>

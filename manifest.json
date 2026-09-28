@@ -1,0 +1,17 @@
+{
+  "name": "Bulgarian 56 Peaks",
+  "short_name": "56 Peaks",
+  "description": "Mountain charity raising funds for child welfare through sport.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0A1432",
+  "theme_color": "#0A1432",
+  "icons": [
+    {
+      "src": "56/1.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+Allow: /blog/feed.xml
+Disallow: /coming-soon.html
+Disallow: /donations.html
+Disallow: /contact.php
+Disallow: /publish.php
+Disallow: /optimize-images.py
+Disallow: /CONTACT_FORM_SETUP.md
+Disallow: /peaks-data.js
+Disallow: /peaks-grid.js
+Disallow: /lightbox.js
+Disallow: /components.js
+Disallow: /peak-card-reveal.js
+Disallow: /realistic-mist.js
+Disallow: /realistic-mist.css
+Disallow: /manifest.json
+Crawl-delay: 10
+
+Disallow: /blog/admin.html
+Disallow: /blog/posts.json
+Disallow: /blog/posts/*.md
+
+Sitemap: https://bulgarian56peaks.org/sitemap.xml

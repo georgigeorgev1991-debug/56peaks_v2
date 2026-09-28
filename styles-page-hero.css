@@ -1,0 +1,66 @@
+/* Inner-page hero (all pages with .page-hero) */
+.page-hero {
+  min-height: 400px;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about-hero,
+.donations-hero,
+.contact-hero,
+.initiatives-hero {
+  background-image: linear-gradient(rgba(10, 20, 50, 0.7), rgba(10, 20, 50, 0.9)), url('hero.webp');
+}
+
+.page-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.page-hero-content h1 {
+  font-size: clamp(1.8rem, 4vw + 0.8rem, 3.5rem);
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.page-hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    height: 38vh;
+    margin-top: 58px;
+    min-height: 200px;
+  }
+
+  .page-hero p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero {
+    height: auto;
+    padding: 3.5rem 1rem 2.5rem;
+    min-height: 180px;
+  }
+
+  .page-hero p {
+    font-size: 0.9rem;
+  }
+}
